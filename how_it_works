@@ -1,3 +1,6 @@
+ПЕРЕД ЗАПУСКОМ НУЖНО В ДИРЕКТОРИИ С generate_inputs.py СОЗДАТЬ ПАПКУ 'files' С ПАПКАМИ 'outputs', 'inputs', 'answers'!
+
+
 Сначала запускаем generate_inputs.py. Он генерирует файлы для тестов.
 После запускаем main.cpp. Он записывает ответы в outputs.
 В нем нужно изменить directory!
