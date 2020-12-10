@@ -64,7 +64,24 @@ void Intro_Sort(int *array, int array_len, int deep) {
     if (deep == 0) {
         Heap_Sort(array, array_len);
     } else {
-        Quick_Sort(array, array_len);
+        int left = 0;
+        int right = array_len - 1;
+        int mid = array[array_len / 2];
+        while (left <= right) {
+            while(array[left] < mid)
+                left++;
+            while(array[right] > mid)
+                right--;
+            if (left <= right) {
+                swap(array[left], array[right]);
+                left++;
+                right--;
+            }
+        }
+        if (right > 0)
+            Intro_Sort(array, right + 1, deep - 1);
+        if (left < array_len)
+            Intro_Sort(&array[left], array_len - left, deep - 1);
     }
 }
 
